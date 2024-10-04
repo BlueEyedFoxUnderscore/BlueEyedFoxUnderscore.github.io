@@ -1,0 +1,300 @@
+/* 
+
+Imports 
+
+*--------------------------------------------------------------------
+*--------------------------------------------------------------------
+*/
+
+
+
+/* 
+
+Blanket Modifiers 
+
+*--------------------------------------------------------------------
+*--------------------------------------------------------------------
+*/
+
+body {
+    background-color:rgb(36, 59, 59);
+    color: lightslategray;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/* 
+
+Classes 
+
+*--------------------------------------------------------------------
+*--------------------------------------------------------------------
+*/
+
+.header{
+    border: 3px solid slategray;
+    border-bottom-right-radius: 20px;
+    border-left:0;
+    border-top: 0;
+
+    background-color: rgb(34, 51, 51);
+
+    color: lightgray;
+
+    width: fit-content;
+
+    display: grid;
+        grid-template-areas: 
+            "logo title"
+            "logo ruler";
+
+    padding: 5px;
+        padding-left: 15px;
+        padding-right:15px;
+    margin: 0px;
+
+    width:min-content;
+}
+
+.menu-item a{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+.bubble{
+    border: 1px solid;
+    border-radius: 10px;
+    color:black;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    padding:5px;
+}
+.prompt{
+    border-color:darkgray;
+    border-bottom-left-radius: 0;
+
+    background-color:lightgray;
+    max-width:50%;  
+}
+
+.block{
+    margin:5px;
+    border: 2px solid slategray;
+    border-radius:5px;
+}
+
+.opensans-font{
+    font-family: "Open Sans";   
+}
+
+
+/* 
+
+IDs
+
+*--------------------------------------------------------------------
+*--------------------------------------------------------------------
+*/
+
+#grid-main{
+    grid-template-areas: 
+    "art art art art cod cod"
+    "art art art art cod cod"
+    "art art art art cod cod"
+    "edu edu edu wrt wrt wrt"
+    "edu edu edu wrt wrt wrt"
+    "hob hob hob hob hob hob"
+    "hob hob hob hob hob hob";
+    display: grid;
+}
+
+#art-block{
+    grid-area: art;
+}
+
+#code-block{
+    grid-area: cod;
+}
+
+#education-block{
+    grid-area: edu;
+}
+
+#writing-block{
+    grid-area: wrt;
+}
+
+#hobby-block {
+    grid-area: hob;
+}
+
+
+@media all and (min-width:500px){
+    #header{
+        padding-right: 30px;
+    }
+}
+
+
+#content-wrap{
+    width:80%;
+    margin:auto;
+}
+
+/*
+Header Modifiers
+
+*---------------------------------------------------
+*/
+
+#navbar{
+    height:66%;
+    max-width:150px;
+    background-color:rgb(10, 10, 10);
+    position:absolute;
+    top:25%;
+
+    border: 3px solid white;
+    border-left:none;
+
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 5px;
+
+    transform:translateX(-95%);
+    transition:transform 1s;
+}
+
+#navbar:hover {
+    transform:none;
+}
+
+@media all and (min-width:500px){
+    #navbar{
+        top:0%;
+        right:25%;
+        width:50%;
+        height:2.5%;
+
+        max-width:none;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        border: 3px solid white;
+            border-top:none;
+            border-radius:20px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+        transform:translateY(-80%);
+    }
+    #navbar .menu-item{
+        display: flex;
+        align-items:center;
+    }
+}
+
+#navbar .menu-item{
+    margin:10px;
+    margin:10px;
+    background-color:black;
+    border-radius: 5px;
+}
+
+#navbar .menu-item:hover{
+    background-color: dimgray;
+}
+
+#header #logo{
+    grid-area: logo;
+}
+
+#header #title{
+    display: none;
+    font-family: "Open Sans";
+    grid-area: title;
+}
+
+#header #header-separator{
+    display: none;
+    grid-area: ruler;
+}
+
+@media all and (min-width:500px){
+    #header #title, #header #header-separator {
+        display:block;
+    }
+
+    #header #title{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+@media all{
+    #art-gallery-grid{
+        grid-template-areas: 
+        "t t t t ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂"
+        "_ _ _ _ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂"
+        "_ _ _ _ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂"
+        "_ _ _ _ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂ ▂"
+        "_ _ _ _ ▄ ▄ ▄ ▄ ▄ ▄ ▆ ▆ ▆ ▆ ▆"
+        "█ █ █ █ ▄ ▄ ▄ ▄ ▄ ▄ ▆ ▆ ▆ ▆ ▆"
+        "█ █ █ █ ▄ ▄ ▄ ▄ ▄ ▄ ▆ ▆ ▆ ▆ ▆";
+        display:grid;
+    }
+    #art-block .header{
+        grid-area: t;
+    }
+    
+    #art-block ._{
+        grid-area: _;
+    }
+    #art-block .▂{
+        grid-area: ▂;
+    }
+    #art-block .▄{
+        grid-area:▄;
+    }
+    #art-block .▆{
+        grid-area:▆;
+    }
+    #art-block .█{
+        grid-area:█;
+    }
+}
+
+
+/*
+*---------------------------------------------------
+*/
+
+#main{
+
+}
+
+#footer{
+
+}
+
+#logo{
+    height:100px;
+}
+
+/* 
+
+Sizing 
+
+*--------------------------------------------------------------------
+*--------------------------------------------------------------------
+*/
