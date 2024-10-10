@@ -20,7 +20,7 @@
 <body>
     <div class="header" id="header">
         <div id="logo">
-            <a href="/main.html"><img src="assets/shared/logo.png" style="max-width:6em" alt=""></a>
+            <a href="/school_portfolio_website/main.html"><img src="assets/logo.png" style="max-width:6em" alt=""></a>
         </div>
 
         <div id=title>
@@ -31,39 +31,52 @@
         <div id="header-separator"><hr></div>
     </div>
     <div class="navbar" id="navbar">
-        <div class="menu-item"><a href="/art.html">Art</a></div><hr>
-        <div class="menu-item"><a href="/education.html">Education</a></div><hr>
-        <div class="menu-item"><a href="/writing.html">Writing</a></div><hr>
-        <div class="menu-item"><a href="/coding.html">Coding</a></div><hr>
-        <div class="menu-item"><a href="/hobbies.html">Hobbies</a></div><hr>
-        <div class="menu-item"><a href="/main.html">Main</a></div>
+        <div class="menu-item"><a href="/school_portfolio_website/art.html">Art</a></div><hr>
+        <div class="menu-item"><a href="/school_portfolio_website/coding.html">Coding</a></div><hr>
+        <div class="menu-item"><a href="/school_portfolio_website/hobbies.html">Hobbies</a></div><hr>
+        <div class="menu-item"><a href="/school_portfolio_website/main.html">Main</a></div>
     </div>
     <div id="content-wrap">
         <div id="grid-main" class="opensans-font">
             <div class="block" id="art-block">
                 <div id="art-gallery-grid">
-                    <div class="header"><h1>Photos</h1></div>
-                    <div class="_"><img src="assets/art/1.png" alt=""></div>
-                    <div class="▂"><img src="assets/art/2.png" alt=""></div>
-                    <div class="▄"><img src="assets/art/3.png" alt=""></div>
-                    <div class="▆"><img src="assets/art/4.png" alt=""></div>
-                    <div class="█">All of these are mine!</div>
+                    <div class="_"><img src="assets/art/1.png" style="width:100%; margin-top:4px"></div>
+                    <div class="▂"><img src="assets/art/2.png" style="width:100%"></div>
+                    <div class="▄"><img src="assets/art/3.png" style="width:100%"></div>
+                    <div class="▆"><img src="assets/art/4.png" style="width:100%"></div>
                 </div> 
-                art
             </div>
             <div class="block" id="code-block">
-                <a href="github.com/BlueEyedFoxUnderscore/Lift">Previous robot code</a>
+                <div class="crbody"><h1><a href="github.com/BlueEyedFoxUnderscore/Lift">Robot code</a></h1></div>
+                <div class="stbody">Some code that I made for last year's FRC Competition robot.</div>
                 <hr>
-                <a href="github.com/BlueEyedFoxUnderscore/AstrFieldOriginDev">Some game I made</a>
+                <div class="crbody"><h1><a href="github.com/BlueEyedFoxUnderscore/AstrFieldOriginDev">Asteroids! But better!</a></h1></div>
+                <div class="stbody">A rudimentary Asteroids copy that devolved into powerups and high-scores: currently in development.</div>
 
             </div>
-            <div class="block" id="education-block">edu</div>
-            <div class="block" id="writing-block">writ</div>
-            <div class="block" id="hobby-block">hob</div>
+            <div class="block" id="hobby-block">
+                <div class="crbody" id="writing">
+                    <div><h1>Writing</h1></div>
+                    <hr>
+                    <div class="stbody">I've spent some time writing books, but unfortunately I haven't finished any. I'm currently working on three: <em>The Memoirs of a Creator Deity: How to Be a God</em> (a book about how to be a god, responsibly), <em>Paradigm-Anomaly</em> (a book about sudden changing times), and <em>Greybox</em> (a book about hubris, and the devastation it can wreak).</div>
+                </div>
+                <hr>
+                <div class="crbody" id="props">
+                    <div class="crbody"><h1>Prop-making</h1></div>
+                    <hr>
+                    <div class="stbody">I've recently found some fun in making different props and costumes from video games and other media; I have several projects planned, and currently I'm working on this year's Halloween costume (the Pioneer from Satisfactory). </div>
+                </div>
+                <hr>
+                <div class="crbody" class="videogames">
+                    <div class="crbody"><h1>Videogames</h1></div>
+                    <hr>
+                    <div class="stbody">Like everyone else, I like playing videogames, but I also like making videogames. Right is a recreation of Asteroids with some extra features; currently I'm learning Godot and Unity, and have several projects planned. </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer">
-        
+        0c 
     </div>
 </body>
 </html>
